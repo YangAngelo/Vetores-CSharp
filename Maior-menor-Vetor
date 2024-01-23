@@ -1,0 +1,25 @@
+2) Faça um programa que leia 20 valores no vetor e no final, escreva o maior e o menor valor lido.
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] vetor = new int[20];
+
+        // Entrada de dados
+        for (int i = 0; i < 20; i++)
+        {
+            Console.Write($"Digite o valor {i + 1}: ");
+            vetor[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        // Encontrar maior e menor valor
+        int maiorValor = vetor.Max();
+        int menorValor = vetor.Min();
+
+        // Mostrar na tela
+        Console.WriteLine($"\nMaior valor: {maiorValor}\nMenor valor: {menorValor}");
+    }
+}
